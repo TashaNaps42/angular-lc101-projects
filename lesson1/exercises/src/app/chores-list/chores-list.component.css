@@ -1,0 +1,13 @@
+.chores {
+    color: teal;
+    font-size: 1.3vw;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+li {
+    font-style: italic;    
+}
