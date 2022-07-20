@@ -3,6 +3,7 @@
     <ul>
         <li *ngFor = 'let chore of chores'>{{chore}}</li>
     </ul>
+    <p *ngIf = "chores.length > finishedChores.length">Create a healthy work-life balance</p>
 </div>
 <hr>
 <div class="doneChores">
@@ -10,5 +11,14 @@
     <ul>
         <li *ngFor = 'let done of finishedChores'>{{done}}</li>
     </ul>
+    <img *ngIf = "chores.length === 0 || finishedChores >= chores.length; else stillChores" src="{{targetImage}}" alt="an image">
+    <ng-template #stillChores><p>No Allowance yet</p></ng-template>
 </div>
+<div>
+    <h1 *ngIf = "chores.length === 0 && finishedChores.length >= 4; else howToEarnDiv">Ice cream treat!</h1>
+</div>
+<ng-template #howToEarnDiv>
+    <h3>Earning Ice Cream</h3>
+    <p>You can use rewards as a method of encouragement to finish unenjoyable tasks, but don't abuse yourself if you can't do it all.</p>
+</ng-template>
 <hr>
